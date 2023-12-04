@@ -1,0 +1,49 @@
+.departures-container{
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+.tab-title {
+    color: #141251;
+}
+
+.show-earlier-container {
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, .1);
+    color: #1b60db;
+}
+
+.show-earlier-container:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    color: #1b60db;
+    text-decoration: underline;
+}
+
+.flight-list-container{
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, .1);
+
+}
+
+.flight-list-container:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    color: #141251;
+    text-decoration: underline;
+}
+
+.custom-border {
+    border-right-width: 1px;
+    border-right-style: dashed;
+    border-color: darkgray;
+    height: 60px;
+  }
+
+  .footer-container{
+    background-image: linear-gradient(160deg, #2c4596 0%, #2164b7 30%, #3d4795 30%, #215db0 54%, #1059aa 100%);
+    color: #fff;
+  }
+
+  @media (max-width: 768px){
+    .custom-border {
+        border: hidden;
+      }
+    }
+ 
+

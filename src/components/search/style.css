@@ -1,0 +1,44 @@
+.search-container {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    padding-top: 30px;
+    width: 100%;
+  }
+  
+  .search-container p {
+    background: linear-gradient(90deg, #964acd 0%, #6759ff 50%, #1b60db 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-size: 3.518rem;
+    font-weight: bold;
+  }
+  .textfield-container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .MuiFilledInput-root.Mui-focused {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.2);
+  }
+  
+  @media (max-width: 768px){
+    .search-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+    }
+    .textfield-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 10px;
+    }
+    .textfield-container TextField{
+        width: 10%;
+    }
+    
+  }
