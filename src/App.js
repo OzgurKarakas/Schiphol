@@ -8,15 +8,20 @@ import Search from './components/search/Search';
 
 function App() {
   const [searchData, setSearchData] = useState('');
+  const [selectedDay, setSelectedDay] = useState('');
 
   const handleSearchChange = (term) => {
     setSearchData(term);
   };
+
+  const handleDayChange = (day) => {
+    setSelectedDay(day);
+  };
   return (
     <>
       <Header />
-      <Search onSearchChange={handleSearchChange}/>
-      <FlightListTab searchData={searchData}/>
+      <Search onSearchChange={handleSearchChange} onDayChange={handleDayChange}/>
+      <FlightListTab searchData={searchData} selectedDay={selectedDay}/>
       <Footer />
     </>
   );

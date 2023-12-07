@@ -5,13 +5,21 @@ import TextField from '@mui/material/TextField';
 import './style.css';
 import { IconButton, InputAdornment, MenuItem, Select } from '@mui/material';
 
-const Search = ({ onSearchChange }) => {
+const Search = ({ onSearchChange, onDayChange }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearchChange = (event) => {
     const term = event.target.value;
     setSearchTerm(term);
     onSearchChange(term);
+  };
+
+  const handleDayChange = (event) => {
+    const selectedDay = event.target.value;
+    setSelectedDay(selectedDay);
+    if (typeof onDayChange === 'function') {
+      onDayChange(selectedDay);
+    }
   };
 
   const currentDate = new Date();
@@ -24,10 +32,7 @@ const Search = ({ onSearchChange }) => {
 
   const [selectedDay, setSelectedDay] = React.useState('');
 
-  const handleDayChange = (event) => {
-    const selectedDay = event.target.value;
-    setSelectedDay(selectedDay);
-  };
+  
   return (
     <div className='search-container'>
       <div className='flex justify-center items-center space-x-0 lg:space-x-48'>

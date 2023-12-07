@@ -4,7 +4,7 @@ import './style.css';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFlights } from '../../store/reducers/flightListSlice';
 
-const Departures = ({ searchData }) => {
+const Departures = ({ searchData, selectedDay }) => {
   const currentDate = new Date();
   const day = currentDate.getDate();
   const month = currentDate.toLocaleString('en-US', { month: 'long' });
@@ -30,7 +30,13 @@ const Departures = ({ searchData }) => {
         new Date(item.scheduleDate).getMonth() === currentDate.getMonth() &&
         item.prefixIATA.toLowerCase().includes(searchData.toLowerCase())
     )
+  ).filter(
+    (item) =>
+      selectedDay
+        ? new Date(item.scheduleDate).getDate() === parseInt(selectedDay.replace("day", ""))
+        : true
   );
+
   const filteredDeparturesFlightsEarlier = Object.values(data).flatMap((flights) =>
     flights.filter(
       (item) =>
