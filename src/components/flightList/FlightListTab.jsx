@@ -31,7 +31,7 @@ function a11yProps(index) {
   };
 }
 
-const FlightList = () => {
+const FlightList = ({ searchData }) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -51,10 +51,10 @@ const FlightList = () => {
       </Box>
       <Box className='tabs-content bg-[#f3f7fd] pl-[1%] xl:pl-[19%] pr-[1%] xl:pr-[19%]'>
         <CustomTabPanel value={value} index={0}>
-          <Departures />
+          <Departures searchData={searchData}/>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          <Arrivals/>
+          <Arrivals searchData={searchData}/>
         </CustomTabPanel>
       </Box>
     </Box>

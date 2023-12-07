@@ -7,13 +7,7 @@ const initialState={
     error:null
 }
 
-
-
-
 export const fetchFlights=createAsyncThunk('flights/fetchFlights',async()=>{
-
-
-
     const response= await instance.get('/flights')
     return response.data;
 });

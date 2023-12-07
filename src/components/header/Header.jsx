@@ -61,7 +61,7 @@ const Header = () => {
             <div className='flex justify-center items-center space-x-1 cursor-pointer'>
               <FiMenu fontSize="large" /> <p>Menu</p>
             </div>
-          </>  }
+          </>}
         </div>
 
         <div className="flex items-center space-x-4">
@@ -73,7 +73,7 @@ const Header = () => {
             <IoMdSearch fontSize="22px" />
           </button>
           <div className="hidden lg:flex text-sm header-text">
-            <span className='font-semibold'>EN</span> <span className=' cursor-pointer'>| NL</span>
+            <span className='font-semibold'>EN</span>&nbsp;<span className=' cursor-pointer'> | NL</span>
           </div>
         </div>
       </div>
@@ -84,23 +84,23 @@ const Header = () => {
             <form className="flex items-center space-x-2">
               <div className="relative">
                 <TextField
-                className='w-[100%] lg:w-[60rem]'
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                autoComplete='off'
-                placeholder='E.g. baggage,`KL897`,sandwich'
-                variant="filled"
-                InputProps={{
-                  style: { backgroundColor: 'white', border: '1px solid lightGray', height: '50px' },
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton>
-                        <IoMdSearch color='blue' />
-                      </IconButton>
-                    </InputAdornment>
-                  ),
-                }}
-              />
+                  className='w-[100%] lg:w-[60rem]'
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  autoComplete='off'
+                  placeholder='E.g. baggage,`KL897`,sandwich'
+                  variant="filled"
+                  InputProps={{
+                    style: { backgroundColor: 'white', border: '1px solid lightGray', height: '50px' },
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton>
+                          <IoMdSearch color='blue' />
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  }}
+                />
               </div>
             </form>
           </div>
@@ -109,58 +109,58 @@ const Header = () => {
       {drawerType === 'mobil' && (
         <div className={`drawer ${drawerType}`} onClick={closeDrawer}>
           <div className="drawer-content-mobil" onClick={(e) => e.stopPropagation()}>
-          <ul>
-          <li className='py-3 p-1 text-md bg-gradient-to-r from-purple-600 via-blue-600 to-blue-900 text-transparent bg-clip-text'>
-            <div >
-              Travellers
-            </div>
-          </li>
-          <li className='flex justify-between items-center py-4 p-1 text-sm hover:text-blue-800'>
-            <div>
-              Flights
-            </div>
-            <IoIosArrowForward fontSize="large" />
-          </li>
-          <li className='flex justify-between items-center py-4 p-1 text-sm hover:text-blue-800'>
+            <ul>
+              <li className='py-3 p-1 text-md bg-gradient-to-r from-purple-600 via-blue-600 to-blue-900 text-transparent bg-clip-text'>
+                <div >
+                  Travellers
+                </div>
+              </li>
+              <li className='flex justify-between items-center py-4 p-1 text-sm hover:text-blue-800'>
+                <div>
+                  Flights
+                </div>
+                <IoIosArrowForward fontSize="large" />
+              </li>
+              <li className='flex justify-between items-center py-4 p-1 text-sm hover:text-blue-800'>
 
-            <div>
-              Parking & Transport
-            </div>
-            <IoIosArrowForward fontSize="large" />
-          </li>
-          <li className='flex justify-between items-center py-4 p-1 text-sm hover:text-blue-800'>
+                <div>
+                  Parking & Transport
+                </div>
+                <IoIosArrowForward fontSize="large" />
+              </li>
+              <li className='flex justify-between items-center py-4 p-1 text-sm hover:text-blue-800'>
 
-            <div>
-              Services
-            </div>
-            <IoIosArrowForward fontSize="large" />
-          </li>
-          <li className='flex justify-between items-center py-4 p-1 text-sm hover:text-blue-800'>
+                <div>
+                  Services
+                </div>
+                <IoIosArrowForward fontSize="large" />
+              </li>
+              <li className='flex justify-between items-center py-4 p-1 text-sm hover:text-blue-800'>
 
-            <div>
-              Covid
-            </div>
-            <IoIosArrowForward fontSize="large" />
-          </li>
-          <li className=' py-10 p-1 text-md bg-gradient-to-r from-purple-600 via-blue-600 to-blue-900 text-transparent bg-clip-text'>
-            <div>
-              More about Schiphol
-            </div>
-          </li>
-          <li className='flex justify-between items-center py-2 p-1 text-sm hover:text-blue-800'>
+                <div>
+                  Covid
+                </div>
+                <IoIosArrowForward fontSize="large" />
+              </li>
+              <li className=' py-10 p-1 text-md bg-gradient-to-r from-purple-600 via-blue-600 to-blue-900 text-transparent bg-clip-text'>
+                <div>
+                  More about Schiphol
+                </div>
+              </li>
+              <li className='flex justify-between items-center py-2 p-1 text-sm hover:text-blue-800'>
 
-            <div>
-              All Schiphol websites
-            </div>
-            <IoIosArrowForward fontSize="large" />
-          </li>
-        </ul>
+                <div>
+                  All Schiphol websites
+                </div>
+                <IoIosArrowForward fontSize="large" />
+              </li>
+            </ul>
 
-        <div className='border-t-2 mt-10'>
-<p className='p-2'>EN | NL</p>
-<p className='hidden' onClick={handleClick}></p>
-        </div>
-         
+            <div className='border-t-2 mt-10'>
+              <p className='p-2'>EN | NL</p>
+              <p className='hidden' onClick={handleClick}></p>
+            </div>
+
           </div>
         </div>
       )}
